@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { matches } from "../../data/score";
 import { MatchCard } from "./MatchCard";
 
@@ -9,7 +8,6 @@ const ManualCarousel = () => {
 
   const totalMatches = matches.length;
 
- 
   useEffect(() => {
     const initialVisibleMatches = matches.slice(0, Math.min(3, totalMatches));
     setVisibleMatches(initialVisibleMatches);
@@ -46,24 +44,24 @@ const ManualCarousel = () => {
   }, [startIndex, totalMatches]);
 
   return (
-    <div className="container relative mx-auto px-4 border-solid border-2 border-red-400">
-      <h1 className="text-2xl font-bold text-center mt-8">Cricket Matches</h1>
-      <div className="max-w-full flex transition-transform ease-in-out duration-300 justify-around overflow-x-auto gap-8 overflow-hidden">
+    <div className="container relative mx-auto px-4 shadow-lg bg-gray-200 rounded-lg">
+      <h1 className="text-2xl font-bold text-center mt-8 mb-4">IPL 2024</h1>
+      <div className="max-w-full flex justify-around gap-8 overflow-hidden">
         {visibleMatches?.map((match, index) => (
           <MatchCard key={index} match={match} />
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-300 px-2 py-1 rounded"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-themeColor px-4 py-2 rounded-md text-white trxt-xl font-semibold focus:outline-none"
         onClick={prevSlide}
       >
-        Prev
+        &lt;
       </button>
       <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-300 px-2 py-1 rounded"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-themeColor px-4 py-2 rounded-md text-white text-xl font-semibold focus:outline-none"
         onClick={nextSlide}
       >
-        Next
+        &gt;
       </button>
     </div>
   );

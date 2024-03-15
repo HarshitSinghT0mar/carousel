@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsCard = ({ image, title, description }) => {
   return (
-    <div className="bg-white rounded-lg min-w-60   shadow-md p-4 mb-4">
+    <div className="bg-white rounded-lg w-60  shadow-md p-4 mb-4">
       <img
         className="w-full h-48 object-cover object-center"
         src={image}

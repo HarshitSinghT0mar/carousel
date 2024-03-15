@@ -39,8 +39,8 @@ const AutomaticCarousel = () => {
   };
 
   return (
-    <div className="container relative mx-auto px-4 border-solid border-2 border-red-400">
-      <div className="max-w-full flex transition-transform ease-in-out duration-300 justify-around overflow-x-auto gap-8 overflow-hidden">
+    <div className="container relative mx-auto p-4 bg-gray-300">
+      <div className="max-w-full flex transition-transform ease-in-out duration-300 justify-around overflow-x-auto gap-8 overflow-hidden carousel-slide">
         {visibleArticles.map((item, index) => (
           <NewsCard
             key={index}
@@ -55,7 +55,7 @@ const AutomaticCarousel = () => {
           <button
             key={index}
             className={`w-4 h-4 mx-1 rounded-full bg-gray-300 hover:bg-gray-500 focus:outline-none ${
-              activeIndicator === index ? "bg-gray-500" : ""
+              activeIndicator === index ? "bg-themeColor" : ""
             }`}
             onClick={() => handleIndicatorClick(index)}
           />
