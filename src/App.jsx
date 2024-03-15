@@ -1,13 +1,15 @@
 import './App.css'
+import AutomaticCarousel from './components/automaticCarousel/AutomaticCarousel'
 import ManualCarousel from './components/manualCarousel/ManualCarousel'
 
 function App() {
 
 
   return (
-    <div className='w-full  h-screen flex items-center justify-center'>
+    <div className='w-full   flex flex-col gap-8 items-center justify-center'>
 
       <ManualCarousel />
+      <AutomaticCarousel />
     </div>
   )
 }

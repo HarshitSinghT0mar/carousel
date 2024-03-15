@@ -46,7 +46,7 @@ const ManualCarousel = () => {
   }, [startIndex, totalMatches]);
 
   return (
-    <div className="container mx-auto px-4 border-solid border-2 border-red-400">
+    <div className="container relative mx-auto px-4 border-solid border-2 border-red-400">
       <h1 className="text-2xl font-bold text-center mt-8">Cricket Matches</h1>
       <div className="max-w-full flex transition-transform ease-in-out duration-300 justify-around overflow-x-auto gap-8 overflow-hidden">
         {visibleMatches?.map((match, index) => (
