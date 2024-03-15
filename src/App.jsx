@@ -1,12 +1,13 @@
 import './App.css'
+import ManualCarousel from './components/manualCarousel/ManualCarousel'
 
 function App() {
 
 
   return (
-    <div className='text-red-400'>
+    <div className='w-full  h-screen flex items-center justify-center'>
 
-      
+      <ManualCarousel />
     </div>
   )
 }
