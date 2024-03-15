@@ -12,7 +12,7 @@ const AutomaticCarousel = () => {
       const nextIndex = (startIndex + 1) % Math.ceil(articles.length / 3);
       setStartIndex(nextIndex);
       setActiveIndicator(nextIndex);
-    }, 3000); 
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [startIndex]);
@@ -24,7 +24,9 @@ const AutomaticCarousel = () => {
     if (articles.length <= 3) {
       visibleArticlesSubset.push(...articles);
     } else if (endIndex >= startIndex * 3) {
-      visibleArticlesSubset.push(...articles.slice(startIndex * 3, endIndex));
+      visibleArticlesSubset.push(
+        ...articles.slice(startIndex * 3, endIndex)
+      );
     } else {
       visibleArticlesSubset.push(...articles.slice(startIndex * 3));
       visibleArticlesSubset.push(...articles.slice(0, endIndex));
@@ -39,7 +41,7 @@ const AutomaticCarousel = () => {
   };
 
   return (
-    <div className="container relative mx-auto p-4 bg-gray-300">
+    <div className="container relative mx-auto p-4 bg-white">
       <div className="max-w-full flex transition-transform ease-in-out duration-300 justify-around overflow-x-auto gap-8 overflow-hidden carousel-slide">
         {visibleArticles.map((item, index) => (
           <NewsCard
@@ -54,8 +56,8 @@ const AutomaticCarousel = () => {
         {Array.from({ length: Math.ceil(articles.length / 3) }, (_, index) => (
           <button
             key={index}
-            className={`w-4 h-4 mx-1 rounded-full bg-gray-300 hover:bg-gray-500 focus:outline-none ${
-              activeIndicator === index ? "bg-themeColor" : ""
+            className={`w-4 h-4 mx-1 rounded-full  hover:bg-gray-700 focus:outline-none ${
+              activeIndicator === index ? "bg-themeColor" : "bg-gray-500"
             }`}
             onClick={() => handleIndicatorClick(index)}
           />

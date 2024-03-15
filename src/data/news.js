@@ -71,11 +71,5 @@ export const articles = [
       description:
         "T20 cricket has revolutionized the way the game is played, attracting new audiences and injecting excitement into traditional formats. Discover the impact of T20 cricket on players, teams, and fans.",
     },
-    {
-      image: "https://via.placeholder.com/1300",
-      title: "The Impact of T20 Cricket on the Game",
-      description:
-        "T20 cricket has revolutionized the way the game is played, attracting new audiences and injecting excitement into traditional formats. Discover the impact of T20 cricket on players, teams, and fans.",
-    },
   ];
   
